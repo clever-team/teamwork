@@ -1,0 +1,167 @@
+/*.loader {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto;
+	text-align: center;
+	border: 2px solid green;
+	border-radius: 50%;
+	visibility: visible;
+}
+
+.loader-error {
+	color: red;
+	border-color: red;
+}*/
+
+.status-btn {
+	position:relative;
+	width: 150px;
+	height: 60px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: green;
+	border-radius: 30px;
+	border:2px solid green;
+	outline: none;
+    transition: transform .125s;
+}
+
+.status-btn:active {
+    transform:scale(.9,.9);
+}
+
+.status-btn:before,
+.status-btn:after {
+    position: absolute;
+    opacity: 0;
+
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%; left: 50%;
+    margin-top: -1.125rem;
+    margin-left: -1.125rem;
+    width: 2.25rem;
+    height: 2.25rem;
+
+    content: '';
+    z-index: 1;
+}
+
+.status-btn.loading {
+    animation: btn-loading .5s forwards;
+}
+
+.status-btn.loading:before {
+    /*opacity: 1;
+    animation: btn-dot-intro .5s forwards;*/
+}
+
+.status-btn.loading:after {
+    /*opacity: 0;
+    animation: btn-dot-pulse 1.5s infinite .5s;*/
+}
+
+.status-btn.ready {
+    text-indent: 0;
+    color: transparent;
+    background-color: green;
+    animation: btn-ready .333s forwards;
+}
+
+
+.status-btn.ready:before {
+    position: absolute;
+    left: 0; right: 0; top: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    color: #8cce1e;
+    content: 'ready';
+    opacity: 0;
+    z-index: 2;
+    /*animation: btn-ready-label .5s forwards .275s;*/
+}
+
+.status-btn.ready:after {
+    /*opacity: 1;
+    animation: btn-dot-outro .333s;*/
+}
+
+/*.status-btn-hidden {
+	visibility: hidden;
+	width: 150px;
+	height: 60px;
+	padding: 6px 0;
+}*/
+
+@keyframes btn-loading {
+	0% {
+
+    }
+
+    20% {
+        color: transparent;
+        transform: scale(1,1);
+    }
+
+    40% {
+        border-color: green;
+        background-color: transparent;
+        transform: scale(1,1);
+    }
+
+    60%  {
+
+        transform: scale(.7,1.1);
+
+        margin-left: 1.25rem;
+        width: 2.5rem;
+        text-indent: -0.6125rem;
+
+        color: transparent;
+        border-color: green;
+        background-color: green;
+    }
+
+    80%  {
+        transform:scale(1,1);
+    }
+
+    100% {
+
+        margin-left: 1.25rem;
+        width: 2.5rem;
+
+        background-color: transparent;
+        border-color: gray;
+        color: transparent;
+    }
+}
+
+@keyframes button-ready {
+	0% {
+        margin-left: 1.25rem;
+        width: 2.5rem;
+    }
+
+    10% {
+        background-color: green;
+        border-color: green;
+    }
+
+    70% {
+        margin: 0;
+        width: 7.25rem;
+        background-color: #fff;
+        transform: scale(1.1,1.1);
+    }
+
+    100% {
+        margin: 0;
+        width: 7rem;
+        border-color: #8cce1e;
+        background-color: green;
+    }
+}

@@ -6,10 +6,11 @@ export default config.extend({
   url: process.env.URL || 'http://localhost:3000',
 
   db: {
-    uri: process.env.DB || 'mongodb://lsk-example1:lsk-example1-pass@publicdb.mgbeta.ru:27000/lsk-example1',
+    //uri: process.env.DB || 'mongodb://lsk-example1:lsk-example1-pass@publicdb.mgbeta.ru:27000/lsk-example1',
+    uri: process.env.DB || 'mongodb://localhost:27017/teamwork',
   },
   jwt: {
-    secret: 'REPLACE_ME_PLEASE',
+    secret: 's3cret_123456',
   },
   auth: {
     socials: require('./socials.js'),
@@ -20,13 +21,13 @@ export default config.extend({
       port: 465,
       secure: true,
       auth: {
-        user: 'lsk@mgbeta.ru',
+        user: 'makushatnik@yandex.ru',
         pass: 'DqPDBbPBlz5A8zwb2M',
       },
     },
     options: {
-      from: '"lego-starter-kit!" <lsk@mgbeta.ru>',
-      subject: 'lego-starter-kit',
+      from: '"clever-team!" <makushatnik@yandex.ru>',
+      subject: 'clever-team',
     },
   },
   ws: {},

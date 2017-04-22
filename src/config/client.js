@@ -2,8 +2,8 @@ import config from 'lego-starter-kit/config/client';
 export default config.extend({
   site: {
     abbr: 'TST',
-    title: 'The Site Title',
-    description: 'The Description',
+    title: 'Cool Blog',
+    description: 'The Clever Team Cool Blog',
     copyright: 'Copyright &copy; 2016-2017',
     slide: {
       video: 'https://skill-branch.ru/video-background.webm',
